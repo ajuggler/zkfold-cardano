@@ -150,6 +150,12 @@ asterizmRelayerCompiled pkh =
     $$(compile [|| untypedAsterizmRelayer ||])
     `unsafeApplyCode` liftCodeDef pkh
 
+asterizmRelayUnparameterized :: CompiledCode (BuiltinData -> BuiltinData -> BuiltinUnit)
+asterizmRelayUnparameterized =
+    $$(compile [|| wrap ||])
+  where
+    wrap = untypedAsterizmRelayer . unsafeFromBuiltinData
+
 asterizmClientCompiled :: AsterizmSetup -> CompiledCode (BuiltinData -> BuiltinUnit)
 asterizmClientCompiled setup =
     $$(compile [|| untypedAsterizmClient ||])

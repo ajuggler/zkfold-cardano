@@ -11,6 +11,7 @@ repository cardano-haskell-packages
 
 packages:
     zkfold-cardano
+    zkfold-cardano-backends
     zkfold-cardano-scripts
     zkfold-cardano-scripts-common
     zkfold-cli
