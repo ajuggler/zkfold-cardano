@@ -5,7 +5,7 @@ import           System.Directory              (createDirectoryIfMissing, getCur
 import           System.FilePath               (takeFileName, (</>))
 
 import           ZkFold.Cardano.OffChain.Utils (savePlutus)
-import           ZkFold.Cardano.UPLC.Asterizm  (asterizmRelayUnparameterized)
+import           ZkFold.Cardano.UPLC.Asterizm  (asterizmRelayerUnparameterized)
 
 main :: IO ()
 main = do
@@ -16,5 +16,5 @@ main = do
 
   createDirectoryIfMissing True $ path </> "assets"
 
-  savePlutus (path </> "assets" </> "asterizmRelayerUnparameterized.plutus") asterizmRelayUnparameterized
+  savePlutus (path </> "assets" </> "asterizmRelayerUnparameterized.plutus") asterizmRelayerUnparameterized
 

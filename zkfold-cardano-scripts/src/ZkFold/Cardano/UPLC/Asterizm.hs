@@ -150,8 +150,8 @@ asterizmRelayerCompiled pkh =
     $$(compile [|| untypedAsterizmRelayer ||])
     `unsafeApplyCode` liftCodeDef pkh
 
-asterizmRelayUnparameterized :: CompiledCode (BuiltinData -> BuiltinData -> BuiltinUnit)
-asterizmRelayUnparameterized =
+asterizmRelayerUnparameterized :: CompiledCode (BuiltinData -> BuiltinData -> BuiltinUnit)
+asterizmRelayerUnparameterized =
     $$(compile [|| wrap ||])
   where
     wrap = untypedAsterizmRelayer . unsafeFromBuiltinData
